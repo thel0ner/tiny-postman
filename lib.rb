@@ -114,7 +114,6 @@ module TinyPostManLib
     header = {
       'Content-type': "application/json",
       'Authorization': "Bearer " + token,
-      'body': payload,
     }
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = is_ssl
