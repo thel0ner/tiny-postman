@@ -2,7 +2,9 @@ require "./lib.rb"
 
 begin
   include TinyPostManLib
-
+  if ARGV[0] === "-remove-token"
+    TinyPostManLib.remove_token
+  end
   TinyPostManLib.banner
   TinyPostManLib.check_token
   token = TinyPostManLib.read_token

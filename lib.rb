@@ -6,7 +6,15 @@ require "readline"
 
 module TinyPostManLib
   def banner()
-    puts Rainbow('Welcome to Kaveh\'s simple API tester - Version 1.0.0').blue.underline
+    puts Rainbow("Welcome to TinyPostMan, a simple API tester - Version 1.0.0").blue.underline
+  end
+
+  def remove_token()
+    if File.exists?("./token.txt") === true
+      puts Rainbow("removing token.txt ...").cyan
+      File.delete("./token.txt")
+      puts Rainbow("token.txt removed successfully").green
+    end
   end
 
   def check_token()
